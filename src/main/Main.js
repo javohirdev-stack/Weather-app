@@ -69,24 +69,24 @@ const Main = () => {
                         <div style={{ display: 'flex', justifyContent: 'space-around ', alignItems: 'center' }}>
                             <div className="selsy">
                                 <img src={weather.current.weather_icons[0]} alt="" />
+                                <p>{weather.current.weather_descriptions}</p>
                             </div>
                             <div className="selsi">
-                                <h2>{weather.current.temperature}'c</h2>
+                                <h2>{weather.current.temperature}<i className="far fa-circle"></i>c</h2>
                             </div>
                             <div className="iconSelsi">
-                                <span>shamol tezligi:{weather.current.wind_speed}km/soat</span>
-                                <span>namlik:{weather.current.humidity} %</span>
-                                <span>bosim:{weather.current.pressure}mb</span>
+                                <span>shamol tezligi: {weather.current.wind_speed}km/soat</span>
+                                <span>namlik: {weather.current.humidity} %</span>
+                                <span>bosim: {weather.current.pressure}mb</span>
 
                             </div>
                         </div>
-
+                        <div className="time"> <p><i className="far fa-clock"></i> {weather.location.localtime}</p></div>
                     </div>
                 </div>
                 : <div></div>}
 
         </header>
-
     </>)
 }
 export default Main;
