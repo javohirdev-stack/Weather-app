@@ -50,6 +50,9 @@ const Main = () => {
 
     return (<>
         <header className="App-header">
+
+            <h1>Butun Yer yuzi ob-havo ma'lumotlari</h1>
+            <p>On The moment</p>
             {label === true ? <label><small> Shahar yoki davlat nomini yozing!</small></label> : <label></label>}
             <input type="text" onChange={(e) => { setCity(e.target.value); setEror(false); setLabel(false) }} />
             <button onClick={weathetApp}>
@@ -64,7 +67,7 @@ const Main = () => {
 
                 <div className='weatherTable'>
                     <div>
-                        <h2>{weather.location.name},{weather.location.region}, {weather.location.country}</h2>
+                        <h2>{weather.location.name}, {weather.location.country}</h2>
 
                         <div style={{ display: 'flex', justifyContent: 'space-around ', alignItems: 'center' }}>
                             <div className="selsy">
