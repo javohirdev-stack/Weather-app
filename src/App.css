@@ -1,11 +1,14 @@
 body {
-  background: linear-gradient(0deg, rgb(5 48 114) 0%, rgb(10 2 87) 100%);
+  background:url(https://images.unsplash.com/photo-1606858621606-921c3792ca1d?ixlib=rb-1.2.1&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=1080&amp;fit=max) rgba(4, 4, 49, 0.63) no-repeat;
+  background-size: cover;
   height: 100vh;
   width: 100%;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: 'Be Vietnam Pro', sans-serif;
+  background-blend-mode: multiply;
+  backdrop-filter: blur(1px);
 }
 
 .App-header {
@@ -41,7 +44,7 @@ h2 {
 }
 
 .App-header input {
-  width: 200px;
+  width: 400px;
   border: none;
   border-radius: 5px;
   padding: 6px;
@@ -57,10 +60,10 @@ h2 {
 }
 
 .loadin {
-  width: 15px;
-  height: 15px;
+  width: 14px;
+  height: 14px;
   border-radius: 50%;
-  border: 3px solid rgba(0, 0, 0, 0.918);
+  border: 3px solid gray;
   border-bottom: 3px solid rgba(0, 0, 0, 0.226);
   animation: spin 1s linear infinite;
 }
@@ -97,11 +100,11 @@ h2 {
 
 .App-header .weatherTable {
   border: 4px solid #608094;
-  background: #080f36;
+  background: #080f366b;
   background-size: cover;
   border-radius: 10px;
   padding: 20px 15px;
-  width: 40%;
+  width: 600px;
   margin-top: 30px;
   animation: fadeup 0.30s ease-in;
 }
@@ -152,4 +155,49 @@ h2 {
 .App-header .weatherTable .selsy h2 {
   font-size: 36px;
 
+}
+
+
+/* ============================responsive=============================== */
+
+@media only screen and (max-width:756px){
+  .App-header .weatherTable {
+    border: 4px solid #608094;
+    background: #080f366b;
+    background-size: cover;
+    border-radius: 10px;
+    padding: 20px 15px;
+   max-width: 400px;
+    margin-top: 30px;
+    animation: fadeup 0.30s ease-in;
+  }
+  .App-header input {
+    width: 350px;
+    border: none;
+    border-radius: 5px;
+    padding: 6px;
+    outline: none;
+    margin-bottom: 10px;
+    color: gray;
+    font-family: 'Be Vietnam Pro', sans-serif;
+  
+  }
+}
+
+@media only screen and (max-width:576px){
+  .App-header .weatherTable {
+    border: 4px solid #608094;
+    background: #080f366b;
+    background-size: cover;
+    border-radius: 10px;
+    padding: 20px 15px;
+   max-width:390px !important ;
+    margin-top: 30px;
+    animation: fadeup 0.30s ease-in;
+  }
+
+  .App-header input {
+    width: 350px;
+   
+  }
 }

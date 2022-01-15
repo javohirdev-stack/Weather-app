@@ -14,3 +14,8 @@ footer div span{
     font-family: 'Be Vietnam Pro', sans-serif;
     font-weight: 400;
 }
+footer div a .fab{
+   font-size: 25px;
+    color: gray;
+    margin:0 15px;
+}
