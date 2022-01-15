@@ -1,0 +1,62 @@
+.App-header {
+  /* background: rgb(111,142,190); */
+  background: linear-gradient(0deg, rgba(111, 142, 190, 1) 0%, rgba(226, 190, 184, 1) 100%);
+  height: 100vh;
+  width: 100%;
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+h2 {
+  margin: 0;
+  padding: 0;
+  font-size: 25px;
+}
+
+.App-header .weatherTable {
+  background-color: rgba(255, 255, 255, 0.95);
+  background-size: cover;
+  border-radius: 10px;
+  padding: 10px;
+  width: 40%;
+  height: 50vh;
+
+  animation: fadeup 0.30s ease-in;
+}
+@keyframes fadeup {
+  0%{
+    transform: translateY(100px) scale(0);
+  }
+  100%{
+    transform: translateY(0) scale(1);
+  }
+}
+
+@supports(-webkit-backdrop-filter: none) or (backdrop-filter: none) {
+  .App-header .weatherTable {
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0.5);  
+  }
+  
+
+}
+
+.App-header .weatherTable .selsy {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.App-header .weatherTable .selsy img {
+  width: 100px;
+}
+
+.App-header .weatherTable .selsy h2 {
+  font-size: 36px;
+
+}
