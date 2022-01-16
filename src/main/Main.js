@@ -8,6 +8,7 @@ const Main = () => {
     const [weather, setWeather] = useState([])
     const [trues, setTrues] = useState(findLastKey)
     const [eror, setEror] = useState(false)
+    const [erorNet, setErorNet] = useState(false)
     const [loadin, setLoadin] = useState(false)
     const [label, setLabel] = useState(false)
     const access_key = '0cd3eaec14af5b2bae0d83c423c13c65'
@@ -42,6 +43,9 @@ const Main = () => {
                     setLoadin(false)
                 })
                 .catch(er => {
+                    setErorNet(true)
+                    setLoadin(false)
+                        setEror(false)
 
                 })
         }
@@ -54,7 +58,7 @@ const Main = () => {
             <h1>Butun Yer yuzi ob-havo ma'lumotlari</h1>
             <p>On The moment</p>
             {label === true ? <label><small> Shahar yoki davlat nomini yozing!</small></label> : <label></label>}
-            <input type="text" onChange={(e) => { setCity(e.target.value); setEror(false); setLabel(false) }} />
+            <input type="text" onChange={(e) => { setCity(e.target.value); setEror(false); setLabel(false);setErorNet(false) }} />
             <button onClick={weathetApp}>
                 {loadin === true ? <div className="loadin"></div> : "search"}
 
@@ -62,6 +66,7 @@ const Main = () => {
 
 
             {eror === true ? <div><h2>Shahar nomini to'g'ri kiriting!</h2></div> : <div></div>}
+            {erorNet === true ? <div style={{color:'red'}}><h2>Internetga Ulaning!</h2></div> : <div></div>}
             {trues === true ?
 
 
@@ -90,6 +95,7 @@ const Main = () => {
                 : <div></div>}
 
         </header>
+
     </>)
 }
 export default Main;
